@@ -22,7 +22,7 @@ class GetData extends React.Component {
 
     render() {
         return (
-            <div className="GetData">
+            <div className="get-data">
                 <h1>Women's World Cup!</h1>
                 <SoccerPlayersCard data={this.state.data} />
             </div>

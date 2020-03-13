@@ -6,6 +6,7 @@ A lot of people &/or companies have legacy code maintained with class components
 
 1) render: Rendering does all the work (in fact it's required for a class component to work). It returns the JSX of your actual component.
 2) componentDidMount: Part of the mounting phase in the React Lifecycle & gets called as soon as the render method is called the first time. Inside of componentDidMount we can call setState which forces a re-render of our component. Any asynchronous actions should be performed inside of our componentDidMount function, especially when it comes to fetching data via HTTP which is it's biggest purpose.
+3) componentWillUnmount: Before a component goes away, it asks for final requests where ou can cancel any outgoing network requests, or remove all event listeners associated with the component. It basically cleans up the component.
 
 - [ ] What is the purpose of a custom hook?
 

@@ -7,7 +7,7 @@ import styled from 'styled-components';
 
 function SoccerPlayersCard(props) {
     return (
-        <div className="soccer-players-card">
+        <div className='soccer-players-card'>
             {props.data.map(d => {
                 return (
                     <CardStyling>
@@ -25,7 +25,7 @@ function SoccerPlayersCard(props) {
 
 const CardStyling = styled.div`
 text-align: center;
-border: 1px solid red;
+border: 2px solid red;
 margin: 3% 0;
 color: red;
 `

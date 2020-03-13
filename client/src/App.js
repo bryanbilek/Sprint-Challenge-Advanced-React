@@ -14,8 +14,9 @@ const App = () => {
   return (
     <div className='App'>
       <div className='dark-mode-setup'>
-        <button onClick={toggleMode}>Dark Mode</button>
+        <button onClick={toggleMode} className="dark-mode-button">Dark Mode</button>
       </div>
+      <h1>Women's World Cup!</h1>
       <GetData />
     </div>
   )

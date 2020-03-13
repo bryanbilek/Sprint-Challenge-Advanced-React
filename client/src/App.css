@@ -18,3 +18,18 @@
   align-items: center;
   justify-content: center;
 }
+
+.dark-mode-setup {
+  padding: 2%;
+}
+
+.dark-mode-button {
+  color: red;
+  background-color: white;
+  border-radius: 10px;
+}
+
+.dark-mode-button:hover {
+    color: white;
+    background-color: red;
+}

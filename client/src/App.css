@@ -3,6 +3,11 @@
   color: white;
 }
 
+.rwb-mode {
+  background-color: blue;
+  color: red;
+}
+
 .App {
   display: flex;
   flex-direction: column;
@@ -32,4 +37,19 @@
 .dark-mode-button:hover {
     color: white;
     background-color: red;
+}
+
+.rwb-mode-button {
+  color: white;
+  background-color: blue;
+  border-radius: 10px;
+}
+
+.rwb-mode .usa {
+  color: white;
+}
+
+.rwb-mode-button:hover {
+  color: blue;
+  background-color: white;
 }

@@ -1,26 +1,33 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import GetData from './components/GetData';
+import { useDarkMode } from './hooks/useDarkMode';
+import { useRWBmode } from './hooks/useRWBmode';
 
-function App() {
+const App = () => {
+  const [darkMode, setDarkMode] = useDarkMode(false);
+  const [rwbMode, setrwbMode] = useRWBmode(false);
+
+  const toggleMode = e => {
+    e.preventDefault();
+    setDarkMode(!darkMode)
+  }
+
+  const toggleMode2 = e => {
+    e.preventDefault();
+    setrwbMode(!rwbMode)
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='App'>
+      <div className='dark-mode-setup'>
+        <button onClick={toggleMode} className="dark-mode-button">Dark Mode</button>
+        <button onClick={toggleMode2} className="rwb-mode-button">RWB Mode</button>
+      </div>
+      <h1 className="usa">USA World Cup Team!</h1>
+      <GetData />
     </div>
-  );
+  )
 }
 
 export default App;
